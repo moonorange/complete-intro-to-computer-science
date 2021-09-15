@@ -1,0 +1,25 @@
+path,title,order,section,description,icon
+"/intro","Introduction","1A","Welcome","Brian introduces to himself, the course, and what you can expect to learn in the next few hours","info-circle"
+"/exercises","The Exercises","1B","Welcome","Brian teaches how to do access the exercises for the workshop.",
+"/big-o","Big O","2A","Algorithm Analysis","Brian goes over how to measure how efficient an algorithm and the tools we have to measure it","flask"
+"/spatial-complexity","Spatial Complexity","2B","Algorithm Analysis","Brian talks about Big O as it's applied to how much space something needs",
+"/trade-offs","Trade Offs","2C","Algorithm Analysis","Brian goes over why we use Big O and the art of making trade offs",
+"/bubble-sort","Bubble Sort","3A","Iterative Sorts","Starting from basics, Brian teaches how to sort items in a list using the classic simple sorting algorithm, the bubble sort.","redo"
+"/insertion-sort","Insertion Sort","3B","Iterative Sorts","A more useful tool, insertion sort is a tool that developers will occasionally use. Brian goes over why that is and how to do it",
+"/recursion","Recursion","4A","Recursive Sorts","Brian defines recursion as something that recurses. In this section Brian teaches what recursion is and some places you might use it.","sitemap"
+"/merge-sort","Merge Sort","4B","Recursive Sorts","One of the most versatile and useful sorts, merge sorts has wide applications due to its stabilitiy and reliability for sorting.",
+"/quick-sort","Quick Sort","4C","Recursive Sorts","A sort that has a better best case than merge sort, quick sort is frequently used as well. Brian teaches you all you need to know to add this to your algorithm toolbox.",
+"/radix-sort","Radix Sort","5A","Non-Comparison Sorts","Brian introduces another way of sorting that doesn't involve direct comparisons: radix sorting.","sort-amount-up-alt"
+"/binary-search","Binary Search","6A","Binary Search","Sometimes you don't need to sort the whole array, you just need to find one element. Brian introduces one of the most effective ways of finding an element in array: binary search","search"
+"/arraylist","ArrayList","7A","Lists",,"list-alt"
+"/linkedlist","LinkedList","7B","Lists",,
+"/binary-search-tree","Binary Search Tree","8A","Trees",,"tree"
+"/avl-tree","AVL Tree","8B","Trees",,
+"/depth-first-tree-traversals","Depth-First Tree Traversals","8C","Trees",,
+"/breadth-first-tree-traversals","Breadth-First Tree Traversals","8D","Trees",,
+"/heap-sort","Heap Sort","8E","Trees",,
+"/graphs","Graphs","9A","Applying Tree Algorithms",,"map-signs"
+"/pathfinding","Pathfinding","9B","Applying Tree Algorithms",,
+"/tries","Tries","9C","Applying Tree Algorithms",,
+"/bloom-filters","Bloom Filters","10A","Other Data Structures",,"seedling"
+"/wrap-up","Wrap Up","11A","Conclusion",,"flag-checkered"
