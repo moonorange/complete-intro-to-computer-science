@@ -1,21 +1,21 @@
 /*
   LinkedList
-  
+
   Name your class / constructor (something you can call new on) LinkedList
-  
+
   LinkedList is made by making nodes that have two properties, the value that's being stored and a pointer to
   the next node in the list. The LinkedList then keep track of the head and usually the tail (I would suggest
   keeping track of the tail because it makes pop really easy.) As you may have notice, the unit tests are the
   same as the ArrayList; the interface of the two are exactly the same and should make no difference to the
   consumer of the data structure.
-  
+
   length - integer  - How many elements in the list
   push   - function - accepts a value and adds to the end of the list
   pop    - function - removes the last value in the list and returns it
   get    - function - accepts an index and returns the value at that position
-  delete - function - accepts an index, removes value from list, collapses, 
+  delete - function - accepts an index, removes value from list, collapses,
                       and returns removed value
-                      
+
   I would suggest making a second class, a Node class. However that's up to you how you implement it. A Node
   has two properties, value and next.
 
@@ -130,16 +130,16 @@ describe("LinkedList", function () {
     list = new LinkedList();
   });
 
-  test("constructor", () => {
+  test.skip("constructor", () => {
     expect(list).toEqual(expect.any(LinkedList));
   });
 
-  test("push", () => {
+  test.skip("push", () => {
     abcRange(26).map((character) => list.push(character));
     expect(list.length).toEqual(26);
   });
 
-  test("pop", () => {
+  test.skip("pop", () => {
     abcRange(13).map((character) => list.push(character));
     expect(list.length).toEqual(13);
     range(10).map(() => list.pop());
@@ -147,7 +147,7 @@ describe("LinkedList", function () {
     expect(list.pop()).toEqual("c");
   });
 
-  test("get", () => {
+  test.skip("get", () => {
     list.push("first");
     expect(list.get(0)).toEqual("first");
     list.push("second");
@@ -161,7 +161,7 @@ describe("LinkedList", function () {
     expect(list.get(list.length - 1)).toEqual("y");
   });
 
-  test("delete", () => {
+  test.skip("delete", () => {
     abcRange(26).map((character) => list.push(character));
     list.delete(13);
     expect(list.length).toEqual(25);

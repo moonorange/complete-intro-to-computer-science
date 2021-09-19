@@ -52,7 +52,7 @@ describe.skip("breadth-first tree traversal", function () {
     }
   };
 
-  test("breadthFirstTraverse", () => {
+  test.skip("breadthFirstTraverse", () => {
     expect(breadthFirstTraverse([tree], [])).toEqual(answer);
   });
 });

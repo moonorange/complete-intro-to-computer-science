@@ -72,7 +72,7 @@ describe("breadth-first tree traversal", function () {
     }
   };
 
-  test("breadthFirstTraverse", () => {
+  test.skip("breadthFirstTraverse", () => {
     expect(breadthFirstTraverse([tree], [])).toEqual(answer);
     expect(breadthFirstTraverse2([tree], [])).toEqual(answer);
   });

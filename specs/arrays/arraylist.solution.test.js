@@ -1,16 +1,16 @@
 /*
   ArrayList
-  
+
   We are going to approximate an implementation of ArrayList. In JavaScript terms, that means we are
   going to implement an array using objects. You should not use arrays at all in this exercise, just
   objects. Make a class (or constructor function; something you can call new on) called ArrayList.
   ArrayList should have the following properties (in addition to whatever properties you create):
-  
+
   length - integer  - How many elements in the array
   push   - function - accepts a value and adds to the end of the list
   pop    - function - removes the last value in the list and returns it
   get    - function - accepts an index and returns the value at that position
-  delete - function - accepts an index, removes value from list, collapses, 
+  delete - function - accepts an index, removes value from list, collapses,
                       and returns removed value
 
   As always, you can change describe to xdescribe to prevent the unit tests from running while
@@ -65,16 +65,16 @@ describe("ArrayList", function () {
     list = new ArrayList();
   });
 
-  test("constructor", () => {
+  test.skip("constructor", () => {
     expect(list).toEqual(expect.any(ArrayList));
   });
 
-  test("push", () => {
+  test.skip("push", () => {
     abcRange(26).map((character) => list.push(character));
     expect(list.length).toEqual(26);
   });
 
-  test("pop", () => {
+  test.skip("pop", () => {
     abcRange(13).map((character) => list.push(character));
     expect(list.length).toEqual(13);
     range(10).map(() => list.pop());
@@ -82,7 +82,7 @@ describe("ArrayList", function () {
     expect(list.pop()).toEqual("c");
   });
 
-  test("get", () => {
+  test.skip("get", () => {
     list.push("first");
     expect(list.get(0)).toEqual("first");
     list.push("second");
@@ -96,7 +96,7 @@ describe("ArrayList", function () {
     expect(list.get(list.length - 1)).toEqual("y");
   });
 
-  test("delete", () => {
+  test.skip("delete", () => {
     abcRange(26).map((character) => list.push(character));
     list.delete(13);
     expect(list.length).toEqual(25);
