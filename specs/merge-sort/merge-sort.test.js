@@ -22,6 +22,7 @@ const mergeSort = (nums) => {
   return merge(sortedRight, sortedLeft)
 };
 
+// There is an assumption that right and left are already sorted
 const merge = (right, left) => {
   let results = []
   while (right.length && left.length) {
@@ -32,6 +33,7 @@ const merge = (right, left) => {
     }
   }
 
+  // Nothing happens if right or left array is empty
   return results.concat(right, left);
 }
 
