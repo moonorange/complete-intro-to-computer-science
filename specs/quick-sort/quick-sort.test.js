@@ -24,26 +24,47 @@ function quickSort(nums) {
   // separate into left and right arrays
   let left = []
   let right = []
-  while (nums.length > 0) {
-    if (nums[0] < pivot) {
-      left.push(nums.shift());
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] < pivot) {
+      left.push(nums[i]);
     } else {
-      right.push(nums.shift());
+      right.push(nums[i]);
     }
   }
   // call quick sort on left and right arrays
-  left = quickSort(left)
-  right = quickSort(right)
+  const sortedLeft = quickSort(left)
+  const sortedRight = quickSort(right)
 
   // return left.concat(pivot, right)
-  return left.concat(pivot, right)
+  return sortedLeft.concat(pivot, sortedRight)
 }
+
+
 
 // unit tests
 // do not modify the below code
 test("quickSort", function () {
-  const input = [10, 8, 2, 1, 6, 3, 9, 4, 7, 5];
-  const answer = quickSort(input);
+  const numSort = (a, b) => {
+    return a - b
+  }
 
-  expect(answer).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+  let input = [10, 8, 2, 1, 6, 3, 9, 4, 7, 5];
+  let copyInput = input.map(ele => ele)
+  let answer = quickSort(input);
+
+  expect(answer).toEqual(copyInput.sort(numSort));
+
+  input = createRandomArray(100);
+  copyInput = input.map(ele => ele)
+  answer = quickSort(input);
+
+  expect(answer).toEqual(copyInput.sort(numSort));
 });
+
+function createRandomArray(max) {
+  const array = []
+  for (let i = 0; i < max; i++) {
+    array.push(Math.floor(Math.random() * Math.floor(max)));
+  }
+  return array
+}
