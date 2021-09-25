@@ -40,9 +40,7 @@ function quickSort(nums) {
 }
 
 
-
 // unit tests
-// do not modify the below code
 test("quickSort", function () {
   const numSort = (a, b) => {
     return a - b
