@@ -8,8 +8,8 @@ function linearSearch(id, array) {
 }
 
 function binarySearch(id, array) {
-  while(0 < array.length) {
-    const length = array.length;
+  let length = array.length;
+  while(0 < length) {
     const mid = Math.floor(length / 2);
 
     if (array[mid].id === id) return array[mid];
@@ -19,6 +19,7 @@ function binarySearch(id, array) {
     } else {
       array = array.slice(0, mid);
     }
+    length = array.length;
   }
   return void 0;
 }
@@ -50,7 +51,7 @@ test.skip("linear search", function () {
 test("binary search", function () {
   const lookingFor = { id: 23, name: "Brian" };
   expect(
-    binarySearch(23, [
+    binarySearch(25, [
       { id: 1, name: "Sam" },
       { id: 3, name: "Sarah" },
       { id: 5, name: "John" },
@@ -64,7 +65,8 @@ test("binary search", function () {
       { id: 19, name: "Marc" },
       { id: 21, name: "Chris" },
       lookingFor,
-      { id: 24, name: "Ben" }
+      { id: 24, name: "Ben" },
+      { id: 28, name: "Jun" },
     ])
-  ).toBe(lookingFor);
+  ).toBe(void 0);
 });
