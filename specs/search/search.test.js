@@ -51,7 +51,7 @@ test.skip("linear search", function () {
 test("binary search", function () {
   const lookingFor = { id: 23, name: "Brian" };
   expect(
-    binarySearch(7, [
+    binarySearch(23, [
       { id: 1, name: "Sam" },
       { id: 3, name: "Sarah" },
       { id: 5, name: "John" },
@@ -67,5 +67,5 @@ test("binary search", function () {
       lookingFor,
       { id: 24, name: "Ben" }
     ])
-  ).toBe(void 0);
+  ).toBe(lookingFor);
 });
