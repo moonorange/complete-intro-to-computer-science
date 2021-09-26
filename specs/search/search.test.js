@@ -8,7 +8,18 @@ function linearSearch(id, array) {
 }
 
 function binarySearch(id, array) {
-  // code goes here
+  while(true) {
+    const length = array.length;
+    const mid = Math.floor(length / 2);
+
+    if (array[mid].id === id) return array[mid];
+
+    if (array[mid].id < id) {
+      array = array.slice(mid + 1);
+    } else {
+      array = array.slice(0, mid);
+    }
+  }
 }
 
 // unit tests
@@ -35,7 +46,7 @@ test.skip("linear search", function () {
   ).toBe(lookingFor);
 });
 
-test.skip("binary search", function () {
+test("binary search", function () {
   const lookingFor = { id: 23, name: "Brian" };
   expect(
     binarySearch(23, [
