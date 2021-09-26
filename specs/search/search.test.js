@@ -8,11 +8,9 @@ function linearSearch(id, array) {
 }
 
 function binarySearch(id, array) {
-  while(true) {
+  while(0 < array.length) {
     const length = array.length;
     const mid = Math.floor(length / 2);
-
-    if (!array[mid]) return void 0;
 
     if (array[mid].id === id) return array[mid];
 
@@ -22,6 +20,7 @@ function binarySearch(id, array) {
       array = array.slice(0, mid);
     }
   }
+  return void 0;
 }
 
 // unit tests
